@@ -16,17 +16,17 @@ class Veiculo(models.Model):
         ('parcelado', 'Parcelado'),
     )
 
-   # Campo para a imagem do veículo
+   
     imagem = models.ImageField(upload_to='veiculos/', null=True, blank=True)
-    tipo = models.CharField(max_length=10, choices=TIPO_CHOICES)  # Tipo do veículo (carro ou moto)
-    cor = models.CharField(max_length=255)  # Cor do veículo
-    marca = models.CharField(max_length=255)  # Marca do veículo
-    modelo = models.CharField(max_length=255)  # Modelo do veículo
-    ano_fabricacao = models.PositiveIntegerField()  # Ano de fabricação do veículo
-    estado = models.CharField(max_length=10, choices=ESTADO_CHOICES)  # Estado do veículo (novo ou usado)
-    km_rodados = models.PositiveIntegerField()  # Quilometragem rodada do veículo
-    passagem_leilao = models.BooleanField(default=False)  # Se possui passagem por leilão
-    formas_pagamento = models.CharField(max_length=10, choices=PAGAMENTO_CHOICES)  # Formas de pagamento
+    tipo = models.CharField(max_length=10, choices=TIPO_CHOICES)  
+    cor = models.CharField(max_length=255)  
+    marca = models.CharField(max_length=255)  
+    modelo = models.CharField(max_length=255)  
+    ano_fabricacao = models.PositiveIntegerField()  
+    estado = models.CharField(max_length=10, choices=ESTADO_CHOICES)  
+    km_rodados = models.PositiveIntegerField()  
+    passagem_leilao = models.BooleanField(default=False)  
+    formas_pagamento = models.CharField(max_length=10, choices=PAGAMENTO_CHOICES)  
 
     def __str__(self):
         return self.modelo

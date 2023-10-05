@@ -8,5 +8,3 @@ class TestUrls(SimpleTestCase):
         url = reverse('login_view')
         self.assertEqual(resolve(url).func, login_view)
         
-#  O método test_se_url_login_esta_mapeando_funcao_view verifica se a URL /login/ 
-# está mapeada para a função de visualização login_view
