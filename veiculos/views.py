@@ -33,3 +33,7 @@ def filtrar_veiculos(request):
     })
 
 
+def sobre(request):
+    
+    
+    return render(request, 'sobre.html')
